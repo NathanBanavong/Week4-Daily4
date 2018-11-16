@@ -10,12 +10,11 @@ public interface RemoteService {
 
     //TODO see if the venue addition works -> if not then throw in NetworkHelper
     //    using the call object
-    @GET("/venue/")
+    @GET("api/venue/")
     Call<DicksGood> getDickUser();
 
-
     //    using the rxjava observable
-    @GET("/venue/")
+    @GET("api/venue/")
     Observable<DicksGood> getDickUserObs();
 
 }

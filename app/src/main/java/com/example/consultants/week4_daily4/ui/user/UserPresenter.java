@@ -22,12 +22,13 @@ public class UserPresenter implements UserContract.Presenter {
         this.dickRepository = dickRepository;
     }
 
-    @Inject
+//    @Inject
     @Override
     public void getDickVenue() {
         Log.d(TAG, "getDickVenue: ");
 
         //TODO need to change 'new DickCallback' -> dagger
+        //using the observable
         dickRepository.getDickVenue(new DickCallback() {
             @Override
             public void onSuccess(List<Venue> venueList) {

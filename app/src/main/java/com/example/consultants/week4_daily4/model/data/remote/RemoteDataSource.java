@@ -3,7 +3,6 @@ package com.example.consultants.week4_daily4.model.data.remote;
 import android.util.Log;
 
 import com.example.consultants.week4_daily4.model.Dicks.DicksGood;
-import com.example.consultants.week4_daily4.model.data.DickCallback;
 
 import javax.inject.Singleton;
 
@@ -33,7 +32,7 @@ public class RemoteDataSource {
                 .build();
     }
 
-    private  RemoteService getRemoteService() {
+    private RemoteService getRemoteService() {
         Log.d(TAG, "getRemoteService: ");
         return createInstance().create(RemoteService.class);
     }
@@ -41,8 +40,7 @@ public class RemoteDataSource {
     //use call object
     public Call<DicksGood> getDickVenue() {
         Log.d(TAG, "getDickVenue: ");
-        return getRemoteService().getDickUser();
-    }
+        return getRemoteService().getDickUser();    }
 
     //using rxjava
     public Observable<DicksGood> getDickUserObs() {
